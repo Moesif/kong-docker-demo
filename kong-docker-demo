@@ -1,0 +1,7 @@
+FROM kong:latest
+USER root
+RUN git clone https://github.com/SmartParkingTechnology/kong-google-logging-plugin.git
+RUN cd kong-google-logging-plugin && luarocks make
+RUN cd ..
+RUN luarocks install --server=http://luarocks.org/manifests/moesif kong-plugin-moesif
+USER kong
