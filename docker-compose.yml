@@ -28,7 +28,7 @@ services:
       KONG_PG_PASSWORD: abc123!
       KONG_PROXY_ACCESS_LOG: /dev/stdout
       KONG_PROXY_ERROR_LOG: /dev/stderr
-      KONG_PLUGINS: 'key-auth,google-logging,cors,acme,moesif'
+      KONG_PLUGINS: 'key-auth,cors,acme,moesif'
       KONG_LUA_SSL_TRUSTED_CERTIFICATE: /etc/ssl/certs/ca-certificates.crt
     networks:
       - kong-net
