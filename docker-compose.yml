@@ -11,7 +11,7 @@ services:
   kong:
     build:
       context: .
-      dockerfile: kong-docker-demo
+      dockerfile: Dockerfile
     image: kong-docker-demo
     user: kong
     depends_on:
