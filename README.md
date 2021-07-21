@@ -51,3 +51,12 @@ curl -i -X GET \
 6. The data should be captured in the corresponding Moesif account.
 
 Congratulations! If everything was done correctly, Moesif should now be tracking all network requests that match the route you specified earlier. If you have any issues with the setup, please reach out to support@moesif.com.
+
+## How to clean db
+
+Remove all the routes and services 
+
+```
+kong migrations reset -y
+kong migrations bootstrap
+```
